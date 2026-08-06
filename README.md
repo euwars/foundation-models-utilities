@@ -40,6 +40,23 @@ let package = Package(
 )
 ```
 
+## This fork: ServerFoundationModels backend
+
+This fork adds a `ServerFoundationModels` package trait. Off by default the
+package compiles against Apple's FoundationModels exactly as upstream; with
+the trait enabled it compiles against
+[ServerFoundationModels](https://github.com/euwars/ServerFoundationModels)
+(≥ 0.7.0), the open-source reimplementation of the FoundationModels surface —
+Linux included. Sources are unchanged apart from conditional imports.
+
+```swift
+.package(
+    url: "https://github.com/euwars/foundation-models-utilities",
+    branch: "main",
+    traits: ["ServerFoundationModels"]
+)
+```
+
 ## Key Features
 
 ### ChatCompletionsLanguageModel
