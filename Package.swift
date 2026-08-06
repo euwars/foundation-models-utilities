@@ -27,10 +27,32 @@ let package = Package(
       targets: ["FoundationModelsUtilities"]
     )
   ],
+  traits: [
+    // Compile against ServerFoundationModels — the open-source,
+    // runs-anywhere reimplementation of the FoundationModels surface —
+    // instead of Apple's framework. Off by default. Enable from a consumer:
+    //   .package(url: …, traits: ["ServerFoundationModels"])
+    .trait(
+      name: "ServerFoundationModels",
+      description: "Use euwars/ServerFoundationModels instead of Apple's FoundationModels."
+    )
+  ],
+  dependencies: [
+    .package(
+      url: "https://github.com/euwars/ServerFoundationModels.git",
+      from: "0.6.0"
+    )
+  ],
   targets: [
     .target(
       name: "FoundationModelsUtilities",
-      dependencies: [],
+      dependencies: [
+        .product(
+          name: "ServerFoundationModels",
+          package: "ServerFoundationModels",
+          condition: .when(traits: ["ServerFoundationModels"])
+        )
+      ],
       swiftSettings: [
         .enableExperimentalFeature("InternalImportsByDefault"),
         .enableExperimentalFeature("NonisolatedNonsendingByDefault"),

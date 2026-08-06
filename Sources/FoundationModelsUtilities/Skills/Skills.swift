@@ -9,7 +9,11 @@
 // See LICENSE.txt for license information
 //
 //===----------------------------------------------------------------------===//
+#if ServerFoundationModels
+public import ServerFoundationModels
+#else
 public import FoundationModels
+#endif
 
 /// A dynamic instructions component that manages a collection of `Skill`
 /// values, exposing them to the model as a tool it can call to toggle

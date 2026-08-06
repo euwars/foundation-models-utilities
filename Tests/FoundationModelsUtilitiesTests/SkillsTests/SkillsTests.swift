@@ -10,7 +10,11 @@
 //
 //===----------------------------------------------------------------------===//
 @testable import FoundationModelsUtilities
+#if ServerFoundationModels
+import ServerFoundationModels
+#else
 import FoundationModels
+#endif
 import Foundation
 import Testing
 import Synchronization

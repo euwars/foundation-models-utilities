@@ -10,7 +10,11 @@
 //
 //===----------------------------------------------------------------------===//
 import Foundation
+#if ServerFoundationModels
+import ServerFoundationModels
+#else
 import FoundationModels
+#endif
 
 /// A structural summary of a transcript entry: its kind plus the content
 /// that matters for these assertions (prompt/response text).

@@ -9,7 +9,11 @@
 // See LICENSE.txt for license information
 //
 //===----------------------------------------------------------------------===//
+#if ServerFoundationModels
+public import ServerFoundationModels
+#else
 public import FoundationModels
+#endif
 
 /// A capability that can be offered to a language model session, allowing
 /// the model to activate specialized behavior on demand.

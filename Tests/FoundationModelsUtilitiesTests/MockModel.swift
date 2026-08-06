@@ -10,7 +10,11 @@
 //
 //===----------------------------------------------------------------------===//
 import Foundation
+#if ServerFoundationModels
+import ServerFoundationModels
+#else
 import FoundationModels
+#endif
 
 struct MockModel: LanguageModel {
   typealias Executor = MockModelExecutor

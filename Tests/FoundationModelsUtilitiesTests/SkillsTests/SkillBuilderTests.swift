@@ -10,7 +10,11 @@
 //
 //===----------------------------------------------------------------------===//
 import Testing
+#if ServerFoundationModels
+import ServerFoundationModels
+#else
 import FoundationModels
+#endif
 @testable import FoundationModelsUtilities
 
 struct SkillBuilderTests {
