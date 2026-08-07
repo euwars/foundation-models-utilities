@@ -60,6 +60,13 @@ get the framework's types with it, under either configuration.
 )
 ```
 
+Because the package re-exports the framework, the same consumer source
+compiles under either configuration — no `#if` and no second import:
+
+```swift
+import FoundationModelsUtilities   // brings Transcript, @Generable, Skill, …
+```
+
 ## Key Features
 
 ### ChatCompletionsLanguageModel
