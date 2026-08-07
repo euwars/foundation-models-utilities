@@ -9,11 +9,6 @@
 // See LICENSE.txt for license information
 //
 //===----------------------------------------------------------------------===//
-#if ServerFoundationModels
-public import ServerFoundationModels
-#else
-public import FoundationModels
-#endif
 
 extension LanguageModelSession.DynamicProfile {
   /// Returns a modified profile that removes completed tool-call and

@@ -47,7 +47,10 @@ package compiles against Apple's FoundationModels exactly as upstream; with
 the trait enabled it compiles against
 [ServerFoundationModels](https://github.com/euwars/ServerFoundationModels)
 (≥ 0.7.0), the open-source reimplementation of the FoundationModels surface —
-Linux included. Sources are unchanged apart from conditional imports.
+Linux included. Upstream sources are unchanged: the trait is spelled once, in
+`FoundationModelsExports.swift`, which re-exports whichever framework the
+package was built against. Consumers import `FoundationModelsUtilities` and
+get the framework's types with it, under either configuration.
 
 ```swift
 .package(

@@ -13,11 +13,6 @@ import Foundation
 #if canImport(FoundationNetworking)
 import FoundationNetworking
 #endif
-#if ServerFoundationModels
-import ServerFoundationModels
-#else
-import FoundationModels
-#endif
 @testable import FoundationModelsUtilities
 import Testing
 

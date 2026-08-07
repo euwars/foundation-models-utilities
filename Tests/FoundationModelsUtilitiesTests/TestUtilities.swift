@@ -9,11 +9,7 @@
 // See LICENSE.txt for license information
 //
 //===----------------------------------------------------------------------===//
-#if ServerFoundationModels
-import ServerFoundationModels
-#else
-import FoundationModels
-#endif
+@testable import FoundationModelsUtilities
 
 extension Transcript.Entry {
   var prompt: Transcript.Prompt? {

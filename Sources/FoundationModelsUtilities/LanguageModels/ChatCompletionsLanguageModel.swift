@@ -13,11 +13,6 @@ public import Foundation
 #if canImport(FoundationNetworking)
 public import FoundationNetworking
 #endif
-#if ServerFoundationModels
-public import ServerFoundationModels
-#else
-public import FoundationModels
-#endif
 #if canImport(CoreImage)
 private import CoreImage
 private import UniformTypeIdentifiers
