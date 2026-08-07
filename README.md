@@ -55,10 +55,14 @@ get the framework's types with it, under either configuration.
 ```swift
 .package(
     url: "https://github.com/euwars/foundation-models-utilities",
-    branch: "main",
+    from: "0.1.0",
     traits: ["ServerFoundationModels"]
 )
 ```
+
+The fork is versioned on its own `0.x` line, separate from the inherited
+upstream `1.0.0-beta*` tags, so `from: "0.1.0"` only ever resolves fork
+releases.
 
 Because the package re-exports the framework, the same consumer source
 compiles under either configuration — no `#if` and no second import:
