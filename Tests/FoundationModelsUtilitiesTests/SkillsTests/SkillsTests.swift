@@ -595,7 +595,7 @@ private struct SkillsMockModel: LanguageModel {
   }
 
   var capabilities: LanguageModelCapabilities {
-    LanguageModelCapabilities(capabilities: [.toolCalling])
+    LanguageModelCapabilities([.toolCalling])
   }
 
   var executorConfiguration: SkillsMockModelExecutor.Configuration {
