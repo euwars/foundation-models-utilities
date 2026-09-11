@@ -46,7 +46,7 @@ This fork adds a `ServerFoundationModels` package trait. Off by default the
 package compiles against Apple's FoundationModels exactly as upstream; with
 the trait enabled it compiles against
 [ServerFoundationModels](https://github.com/euwars/ServerFoundationModels)
-(≥ 0.7.0), the open-source reimplementation of the FoundationModels surface —
+(≥ 0.8.0), the open-source reimplementation of the FoundationModels surface —
 Linux included. Upstream sources are unchanged: the trait is spelled once, in
 `FoundationModelsExports.swift`, which re-exports whichever framework the
 package was built against. Consumers import `FoundationModelsUtilities` and
@@ -55,13 +55,13 @@ get the framework's types with it, under either configuration.
 ```swift
 .package(
     url: "https://github.com/euwars/foundation-models-utilities",
-    from: "0.1.0",
+    from: "0.2.0",
     traits: ["ServerFoundationModels"]
 )
 ```
 
 The fork is versioned on its own `0.x` line, separate from the inherited
-upstream `1.0.0-beta*` tags, so `from: "0.1.0"` only ever resolves fork
+upstream `1.0.0-beta*` tags, so `from: "0.2.0"` only ever resolves fork
 releases.
 
 Because the package re-exports the framework, the same consumer source
